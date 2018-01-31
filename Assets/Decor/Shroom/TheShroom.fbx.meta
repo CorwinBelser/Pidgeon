@@ -1,18 +1,16 @@
 fileFormatVersion: 2
-guid: f91dc7e37f9f9bc43acdc1d0aea6e922
-timeCreated: 1517377307
+guid: c24dcd725983e034db83f4b4c1985548
+timeCreated: 1517389411
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2100000: None
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: //RootNode
+    400000: //RootNode
+    2100000: ShroomAlbedo
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Shroom
   externalObjects: {}
   materials:
     importMaterials: 1
