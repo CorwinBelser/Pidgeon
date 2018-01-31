@@ -2,6 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 public class Collectible : MonoBehaviour {
 
     public static string COLLECTIBLE_TAG = "Collectible";
@@ -21,10 +22,17 @@ public class Collectible : MonoBehaviour {
     private Vector3 _dropTarget;
     private float _dropDelay;
 
+    public AudioClip COLLECTED_MUSIC;
+    public AudioClip COLLISION_SOUND;
+    private AudioSource _audioSource;
+    private float _musicPauseTime;
+
     void Start()
     {
         _spawnPosition = this.transform.position;
         _rigidbody = this.GetComponent<Rigidbody>();
+        _audioSource = this.GetComponent<AudioSource>();
+        _audioSource.Stop();
     }
 
     void FixedUpdate()
@@ -50,12 +58,40 @@ public class Collectible : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter(Collision coll)
+    {
+        this.StartCoroutine("PlayCollisionSoundEffect");
+    }
+
+    private IEnumerator PlayCollisionSoundEffect()
+    {
+        if (_audioSource.clip == COLLECTED_MUSIC)
+            _musicPauseTime = _audioSource.time;
+
+        /* Play the collision sound effect */
+        _audioSource.Stop();
+        _audioSource.PlayOneShot(COLLISION_SOUND);
+
+        yield return new WaitForSeconds(COLLISION_SOUND.length);
+
+        _audioSource.Stop();
+        _audioSource.clip = COLLECTED_MUSIC;
+        _audioSource.time = _musicPauseTime;
+        if (_target != null)
+            _audioSource.Play();
+    }
+
     public bool Pickup(Transform target)
     {
         if (Time.time - _timeDropped > PICKUP_COOLDOWN)
         {
             Debug.Log("<color=blue>    (Collectible): " + this.name + " now following " + target.name + "</color>");
             _target = target;
+
+            /* Play this collectible's music, if any */
+            _audioSource.clip = COLLECTED_MUSIC;
+            _audioSource.Play();
+
             return true;
         }
         Debug.Log("<color=green>    (Collectible): Collectible is on cooldown and can't be picked up</color");
@@ -80,6 +116,9 @@ public class Collectible : MonoBehaviour {
         /* Clear out any existing forces */
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
+
+        /* Stop any music being played */
+        _audioSource.Stop();
 
         _timeDropped = Time.time;
         _target = null;
