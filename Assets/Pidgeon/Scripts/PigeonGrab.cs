@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PigeonGrab : MonoBehaviour {
-    private static string COLLECTIBLE_TAG = "Collectible";
+
     private List<Transform> _heldObjects;
 
     void Start()
@@ -29,7 +29,7 @@ public class PigeonGrab : MonoBehaviour {
     {
         //Debug.Log("<color=green>(Pigeon): Trying to pickup " + coll.name + "</color>");
         /* Check if the thing below is a collectible */
-        if (coll.tag == COLLECTIBLE_TAG && !_heldObjects.Contains(coll.transform))
+        if (coll.tag == Collectible.COLLECTIBLE_TAG && !_heldObjects.Contains(coll.transform))
         {
             //Debug.Log("<color=green>    Tag matched! Picking up...</Color>");
             /* Tell the collectible to follow the last grabbed collectible */

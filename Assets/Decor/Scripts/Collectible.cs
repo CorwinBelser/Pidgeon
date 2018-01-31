@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Collectible : MonoBehaviour {
 
+    public static string COLLECTIBLE_TAG = "Collectible";
+
     public float FOLLOW_VELOCITY = 2.5f;
     public float MAX_VELOCITY = 15f;
     public float MAX_FORCE = 40f;

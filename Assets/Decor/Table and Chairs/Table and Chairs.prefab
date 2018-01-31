@@ -1496,7 +1496,7 @@ GameObject:
   - component: {fileID: 65497558810637504}
   - component: {fileID: 65397920986557862}
   - component: {fileID: 114209570938218078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chair_1
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -1947,7 +1947,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1333897749416856}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4072521884743260}
@@ -2025,7 +2025,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519753713562114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.76, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 10, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4849616469324046}
@@ -2071,7 +2071,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484879553685812}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4258735192489720}
@@ -2331,7 +2331,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1979433278602310}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4758271583026968}
@@ -2396,7 +2396,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719952545133230}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4499665991963616}
@@ -2591,7 +2591,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313233405903752}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4410056333358812}
@@ -2656,7 +2656,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932061878657842}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4118856091973090}
@@ -2734,7 +2734,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1066777986598168}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4602994308575048}
@@ -6857,7 +6857,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FOLLOW_SPEED: 1000
+  FOLLOW_VELOCITY: 2.5
+  MAX_VELOCITY: 15
+  MAX_FORCE: 40
+  GAIN: 5
   PICKUP_COOLDOWN: 5
   RESPAWN_HEIGHT: 5
 --- !u!114 &114209570938218078
@@ -6871,7 +6874,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FOLLOW_SPEED: 1000
+  FOLLOW_VELOCITY: 2.5
+  MAX_VELOCITY: 15
+  MAX_FORCE: 40
+  GAIN: 5
   PICKUP_COOLDOWN: 5
   RESPAWN_HEIGHT: 5
 --- !u!114 &114262535932832348
@@ -6885,7 +6891,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FOLLOW_SPEED: 1000
+  FOLLOW_VELOCITY: 2.5
+  MAX_VELOCITY: 15
+  MAX_FORCE: 40
+  GAIN: 5
   PICKUP_COOLDOWN: 5
   RESPAWN_HEIGHT: 5
 --- !u!114 &114429356571133798
@@ -6899,7 +6908,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FOLLOW_SPEED: 1000
+  FOLLOW_VELOCITY: 2.5
+  MAX_VELOCITY: 15
+  MAX_FORCE: 40
+  GAIN: 5
   PICKUP_COOLDOWN: 5
   RESPAWN_HEIGHT: 5
 --- !u!114 &114485536731928130
@@ -6913,7 +6925,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FOLLOW_SPEED: 1000
+  FOLLOW_VELOCITY: 2.5
+  MAX_VELOCITY: 15
+  MAX_FORCE: 40
+  GAIN: 5
   PICKUP_COOLDOWN: 5
   RESPAWN_HEIGHT: 5
 --- !u!114 &114769824610246370
@@ -6927,7 +6942,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FOLLOW_SPEED: 1000
+  FOLLOW_VELOCITY: 2.5
+  MAX_VELOCITY: 15
+  MAX_FORCE: 40
+  GAIN: 5
   PICKUP_COOLDOWN: 5
   RESPAWN_HEIGHT: 5
 --- !u!114 &114789043246487252
@@ -6941,6 +6959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FOLLOW_SPEED: 1000
+  FOLLOW_VELOCITY: 2.5
+  MAX_VELOCITY: 15
+  MAX_FORCE: 40
+  GAIN: 5
   PICKUP_COOLDOWN: 5
   RESPAWN_HEIGHT: 5
