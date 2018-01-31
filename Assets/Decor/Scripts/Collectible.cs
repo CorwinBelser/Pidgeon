@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -18,6 +17,9 @@ public class Collectible : MonoBehaviour {
     private Transform _target;
     private float _timeDropped = -5f;
     private Rigidbody _rigidbody;
+
+    private Vector3 _dropTarget;
+    private float _dropDelay;
 
     void Start()
     {
@@ -56,12 +58,29 @@ public class Collectible : MonoBehaviour {
             _target = target;
             return true;
         }
-        //Debug.Log("<color=green>    (Collectible): Collectible is on cooldown and can't be picked up</color");
+        Debug.Log("<color=green>    (Collectible): Collectible is on cooldown and can't be picked up</color");
         return false;
     }
 
-    public void Drop()
+    public void Drop(Vector3 dropTarget, float dropDelay)
     {
+        _dropTarget = dropTarget;
+        _dropDelay = dropDelay;
+        this.StartCoroutine("MoveAndDrop");
+    }
+
+    IEnumerator MoveAndDrop()
+    {
+        Debug.Log("<color=blue>(Collectible " + this.name + "): Waiting for " + _dropDelay + " seconds to drop</color>");
+        /* wait before dropping */
+        yield return new WaitForSeconds(_dropDelay);
+
+        /* Teleport the object to the drop point */
+        this.transform.position = _dropTarget;
+        /* Clear out any existing forces */
+        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.angularVelocity = Vector3.zero;
+
         _timeDropped = Time.time;
         _target = null;
     }

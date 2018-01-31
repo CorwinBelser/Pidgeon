@@ -16,12 +16,12 @@ public class PigeonGrab : MonoBehaviour {
         /* If the player presses Fire2, drop every item */
         if (Input.GetButtonDown("Fire2") && _heldObjects.Count != 0)
         {
-            for (int i = _heldObjects.Count - 1; i >= 0; i--)
+            for (int i = 0; i < _heldObjects.Count; i++)
             {
                 //Debug.Log("<color=blue>(Pigeon): Dropping " + _heldObjects[i].name + " </color>");
-                _heldObjects[i].GetComponent<Collectible>().Drop();
-                _heldObjects.RemoveAt(i);
+                _heldObjects[i].GetComponent<Collectible>().Drop(_heldObjects[0].position, 0.5f * i);
             }
+            _heldObjects.Clear();
         }
     }
     
