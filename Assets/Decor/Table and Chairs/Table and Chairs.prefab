@@ -195,9 +195,10 @@ GameObject:
   - component: {fileID: 65275394604171640}
   - component: {fileID: 65470866503349192}
   - component: {fileID: 65677070676558970}
+  - component: {fileID: 114485536731928130}
   m_Layer: 8
   m_Name: Table
-  m_TagString: Stackable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,9 +520,10 @@ GameObject:
   - component: {fileID: 54021516198366514}
   - component: {fileID: 65482575286816532}
   - component: {fileID: 65513089150776872}
+  - component: {fileID: 114082190634106076}
   m_Layer: 8
   m_Name: Chair_6
-  m_TagString: Stackable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,9 +556,10 @@ GameObject:
   - component: {fileID: 54553544147179506}
   - component: {fileID: 65012040449643678}
   - component: {fileID: 65554206137966864}
+  - component: {fileID: 114262535932832348}
   m_Layer: 8
   m_Name: Chair_2
-  m_TagString: Stackable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -776,9 +779,10 @@ GameObject:
   - component: {fileID: 54809921078180566}
   - component: {fileID: 65545624027265080}
   - component: {fileID: 65665315516631716}
+  - component: {fileID: 114789043246487252}
   m_Layer: 8
   m_Name: Chair_5
-  m_TagString: Stackable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1149,9 +1153,10 @@ GameObject:
   - component: {fileID: 54749524597027424}
   - component: {fileID: 65862938904355644}
   - component: {fileID: 65230752146053078}
+  - component: {fileID: 114769824610246370}
   m_Layer: 8
   m_Name: Chair_4
-  m_TagString: Stackable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1490,9 +1495,10 @@ GameObject:
   - component: {fileID: 54246238982912466}
   - component: {fileID: 65497558810637504}
   - component: {fileID: 65397920986557862}
+  - component: {fileID: 114209570938218078}
   m_Layer: 0
   m_Name: Chair_1
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1576,9 +1582,10 @@ GameObject:
   - component: {fileID: 54312182796527886}
   - component: {fileID: 65695777703435326}
   - component: {fileID: 65706477355060342}
+  - component: {fileID: 114429356571133798}
   m_Layer: 8
   m_Name: Chair_3
-  m_TagString: Stackable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2018,7 +2025,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519753713562114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.76, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4849616469324046}
@@ -6537,11 +6544,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313233405903752}
   serializedVersion: 2
-  m_Mass: 4
+  m_Mass: 0.5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6552,11 +6559,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932061878657842}
   serializedVersion: 2
-  m_Mass: 4
+  m_Mass: 0.5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6567,11 +6574,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1979433278602310}
   serializedVersion: 2
-  m_Mass: 4
+  m_Mass: 0.5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6582,11 +6589,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1333897749416856}
   serializedVersion: 2
-  m_Mass: 4
+  m_Mass: 0.5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6597,11 +6604,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719952545133230}
   serializedVersion: 2
-  m_Mass: 4
+  m_Mass: 0.5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6612,11 +6619,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1066777986598168}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 0.5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6627,11 +6634,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484879553685812}
   serializedVersion: 2
-  m_Mass: 4
+  m_Mass: 0.5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6839,3 +6846,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1, y: 0.1, z: 1.75}
   m_Center: {x: 0.85, y: 1, z: 0.1}
+--- !u!114 &114082190634106076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313233405903752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOLLOW_SPEED: 1000
+  PICKUP_COOLDOWN: 5
+  RESPAWN_HEIGHT: 5
+--- !u!114 &114209570938218078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932061878657842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOLLOW_SPEED: 1000
+  PICKUP_COOLDOWN: 5
+  RESPAWN_HEIGHT: 5
+--- !u!114 &114262535932832348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333897749416856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOLLOW_SPEED: 1000
+  PICKUP_COOLDOWN: 5
+  RESPAWN_HEIGHT: 5
+--- !u!114 &114429356571133798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979433278602310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOLLOW_SPEED: 1000
+  PICKUP_COOLDOWN: 5
+  RESPAWN_HEIGHT: 5
+--- !u!114 &114485536731928130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1066777986598168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOLLOW_SPEED: 1000
+  PICKUP_COOLDOWN: 5
+  RESPAWN_HEIGHT: 5
+--- !u!114 &114769824610246370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719952545133230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOLLOW_SPEED: 1000
+  PICKUP_COOLDOWN: 5
+  RESPAWN_HEIGHT: 5
+--- !u!114 &114789043246487252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484879553685812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOLLOW_SPEED: 1000
+  PICKUP_COOLDOWN: 5
+  RESPAWN_HEIGHT: 5
