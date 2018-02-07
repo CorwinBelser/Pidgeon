@@ -34,9 +34,9 @@ public class PigeonGrab : MonoBehaviour {
             //Debug.Log("<color=green>    Tag matched! Picking up...</Color>");
             /* Tell the collectible to follow the last grabbed collectible */
             bool succeeded = false;
-            if (_heldObjects.Count != 0)
+            /*if (_heldObjects.Count != 0)
                 succeeded = coll.gameObject.GetComponent<Collectible>().Pickup(_heldObjects[_heldObjects.Count - 1]);
-            else
+            else*/
                 succeeded = coll.gameObject.GetComponent<Collectible>().Pickup(this.transform);
             
             /* Add the collectible to the list of held items */
