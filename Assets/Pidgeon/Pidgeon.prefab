@@ -414,7 +414,8 @@ GameObject:
   - component: {fileID: 114508396492383454}
   - component: {fileID: 114563485159928140}
   - component: {fileID: 82059115477854026}
-  m_Layer: 0
+  - component: {fileID: 135033255057968418}
+  m_Layer: 9
   m_Name: Pidgeon
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1166,7 +1167,7 @@ GameObject:
   - component: {fileID: 4998126974942014}
   - component: {fileID: 135827614164824760}
   - component: {fileID: 114663590264898658}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CarryLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3482,7 +3483,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!82 &82059115477854026
 AudioSource:
@@ -3592,11 +3593,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f5fb4b26a98504a86a0a089eff620b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rb: {fileID: 0}
-  PLAYER: {fileID: 0}
-  SPEED: 5
-  JUMP_AMOUNT: 500
+  _rb: {fileID: 54955971102260658}
+  PLAYER: {fileID: 1309152636678224}
+  SPEED: 10
+  JUMP_AMOUNT: 200
+  MAXIMUM_VELOCITY: 20
+  CINE: {fileID: 0}
   OTS_CAMERA: {fileID: 0}
+  GROUND_CHECK_LAYER_MASK:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!114 &114563485159928140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3621,6 +3627,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6295372927ca7448952f67ece19ff84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135033255057968418
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309152636678224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.8
+  m_Center: {x: 0, y: 0.82, z: 0}
 --- !u!135 &135827614164824760
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -3647,7 +3665,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 597d53694dad30c4295fae9c1beee5cc, type: 3}
+  - {fileID: 2100000, guid: 1923a05c1b8952d47bb6e8c6436d1938, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

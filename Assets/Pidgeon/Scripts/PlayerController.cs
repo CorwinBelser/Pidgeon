@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
     
 	public GameObject OTS_CAMERA;
     private Animator _animator;
-    private int _ignoreCollectibleLayerMask;
+    public LayerMask GROUND_CHECK_LAYER_MASK;
 	
 	void Awake(){
 		Cursor.lockState = CursorLockMode.Locked;
@@ -28,8 +28,6 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         _animator = GetComponent<Animator>();
-        _ignoreCollectibleLayerMask = 1 << LayerMask.NameToLayer("Collectible"); /* Bitmask set to only collide with the collectible layer */
-        _ignoreCollectibleLayerMask = ~_ignoreCollectibleLayerMask; /* Inverted layer mask to ignore the collectible layer */
     }
 
     void Update()
@@ -81,7 +79,7 @@ public class PlayerController : MonoBehaviour {
             _animator.SetBool(ANIMATOR_BOOL_MOVING, _rb.velocity.sqrMagnitude > 1f);
 
             /* Shoot a raycast to determine if there the ground is below, setting the isGrounded flag on the animator */
-            _animator.SetBool(ANIMATOR_BOOL_GROUNDED, Physics.Raycast(this.transform.position, Vector3.down, 1f, _ignoreCollectibleLayerMask));
+            _animator.SetBool(ANIMATOR_BOOL_GROUNDED, Physics.Raycast(this.transform.position + Vector3.up, Vector3.down, 1.5f, GROUND_CHECK_LAYER_MASK));
         }
 
     }
