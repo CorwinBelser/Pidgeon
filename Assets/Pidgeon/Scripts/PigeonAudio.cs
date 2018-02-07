@@ -17,7 +17,8 @@ public class PigeonAudio : MonoBehaviour {
 
     void OnCollisionEnter(Collision coll)
     {
-        this.StartCoroutine("PlayCollisionSoundEffect");
+        if (coll.gameObject.tag != Collectible.COLLECTIBLE_TAG)
+            this.StartCoroutine("PlayCollisionSoundEffect");
     }
 
     private IEnumerator PlayCollisionSoundEffect()

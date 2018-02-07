@@ -1437,10 +1437,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b8bcbfb7864f74089e4bfe0b3826ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FOLLOW_VELOCITY: 2.5
-  MAX_VELOCITY: 15
-  MAX_FORCE: 40
-  GAIN: 5
+  FOLLOW_VELOCITY: 25
+  MAX_VELOCITY: 50
+  MAX_FORCE: 100
+  GAIN: 25
   PICKUP_COOLDOWN: 5
   RESPAWN_HEIGHT: 5
   COLLECTED_MUSIC: {fileID: 8300000, guid: 20c77d04d089aef4bb8641765666c0e3, type: 3}
