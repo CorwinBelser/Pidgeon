@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: StandardGrass
-  m_Shader: {fileID: 4800000, guid: 73441900886bc50429b85f2d2d1992a0, type: 3}
-  m_ShaderKeywords: 
+  m_Name: Dirt
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _DETAIL_MULX2
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -23,7 +23,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fed10fec9c521de4bba80449ccc8b0b0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7b2bd72b9a160b74a83474fafebe6b9a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -70,8 +70,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WindStrength: 0.458
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.45101643, g: 0.54981357, b: 0.63235295, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
