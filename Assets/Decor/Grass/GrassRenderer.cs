@@ -15,6 +15,7 @@ public class GrassRenderer : MonoBehaviour {
 
     public float startHeight = 1000;
     public float GrassOffSet = 0f;
+	public LayerMask mask;
 
     // Use this for initialization
     void Start () {
@@ -34,7 +35,7 @@ public class GrassRenderer : MonoBehaviour {
             origin.z += size.y * Random.Range(-.5f, .5f);
             Ray ray = new Ray(origin, Vector3.down);
             RaycastHit hit;
-            if(Physics.Raycast(ray, out hit))
+            if(Physics.Raycast(ray, out hit,1000f,mask))
             {
                 //origin = hit.point;
                 origin = hit.point + (Vector3.up * GrassOffSet);
