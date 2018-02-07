@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114110346066703930}
   m_Layer: 0
   m_Name: Bird Nest
-  m_TagString: Nest
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1158442628789770}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.8948703, y: 3.1795478, z: -34.772236}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
@@ -87,7 +87,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f91dc7e37f9f9bc43acdc1d0aea6e922, type: 3}
+  - {fileID: 2100000, guid: e5b687cca4dd22049ad4223264b1c5f7, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +113,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1623871166540960}
-  m_Mesh: {fileID: 4300000, guid: f91dc7e37f9f9bc43acdc1d0aea6e922, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e5b687cca4dd22049ad4223264b1c5f7, type: 3}
 --- !u!65 &65197151690820740
 BoxCollider:
   m_ObjectHideFlags: 1
