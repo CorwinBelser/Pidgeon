@@ -1659,9 +1659,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 54678197497029608}
   PLAYER: {fileID: 1100293712809054}
-  SPEED: 5
+  SPEED: 10
   JUMP_AMOUNT: 500
-  MAXIMUM_VELOCITY: 10
+  MAXIMUM_VELOCITY: 20
+  CINE: {fileID: 0}
   OTS_CAMERA: {fileID: 0}
 --- !u!135 &135240885339062790
 SphereCollider:
