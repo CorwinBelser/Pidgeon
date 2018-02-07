@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1317152900}
-  m_IndirectSpecularColor: {r: 0.3997288, g: 0.6982877, b: 0.95298165, a: 1}
+  m_IndirectSpecularColor: {r: 0.39978075, g: 0.69821185, b: 0.95300895, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -233,7 +233,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55140849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 217.70999, z: -174}
+  m_LocalPosition: {x: 0, y: 7.42, z: -27.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 868791510}
@@ -841,7 +841,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529439215}
-  m_LocalRotation: {x: 0.46000624, y: -0, z: -0, w: 0.88791573}
+  m_LocalRotation: {x: 0.14616904, y: -0, z: -0, w: 0.98925966}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1098,7 +1098,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 868791508}
-  m_LocalRotation: {x: 0.46000624, y: -0, z: -0, w: 0.88791573}
+  m_LocalRotation: {x: 0.14616904, y: -0, z: -0, w: 0.98925966}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1308,7 +1308,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1272356646}
-  m_LocalRotation: {x: 0.46000624, y: -0, z: -0, w: 0.88791573}
+  m_LocalRotation: {x: 0.14616904, y: -0, z: -0, w: 0.98925966}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1531,6 +1531,11 @@ Prefab:
       propertyPath: m_Name
       value: BirdNest
       objectReference: {fileID: 0}
+    - target: {fileID: 114110346066703930, guid: 5b8126602b7ff0144a6e8bff2d9ebfa1,
+        type: 2}
+      propertyPath: CANVAS
+      value: 
+      objectReference: {fileID: 1412567471}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b8126602b7ff0144a6e8bff2d9ebfa1, type: 2}
   m_IsPrefabParent: 0
