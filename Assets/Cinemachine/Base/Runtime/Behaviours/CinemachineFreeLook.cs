@@ -27,6 +27,8 @@ namespace Cinemachine
         [Tooltip("Object for the camera children wants to move with (the body target).")]
         [NoSaveDuringPlay]
         public Transform m_Follow = null;
+		
+		
 
         /// <summary>If enabled, this lens setting will apply to all three child rigs, otherwise the child rig lens settings will be used</summary>
         [Tooltip("If enabled, this lens setting will apply to all three child rigs, otherwise the child rig lens settings will be used")]
@@ -94,6 +96,10 @@ namespace Cinemachine
             new Orbit(2.5f, 3f),
             new Orbit(0.4f, 1.3f)
         };
+		
+		
+		public float[] _farOrbits = new float[3];
+		public float[] _defOrbits = new float[3];
 
         // Legacy support
         [SerializeField] [HideInInspector] [FormerlySerializedAs("m_HeadingBias")] 
@@ -669,5 +675,14 @@ namespace Cinemachine
             }
             //UnityEngine.Profiling.Profiler.EndSample();
         }
+		
+		void Start(){
+			for(int i=0; i < m_Orbits.Length; i++){
+				_farOrbits[i] = m_Orbits[i].m_Radius + 4f;
+			}
+			for(int i=0; i < m_Orbits.Length; i++){
+				_defOrbits[i] = m_Orbits[i].m_Radius;
+			}
+		}
     }
 }
