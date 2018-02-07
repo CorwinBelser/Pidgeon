@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour {
 		if(inputVertical > 0 || inputHorizontal != 0){
 			for(int i=0; i < CINE.m_Orbits.Length; i++){
 				CINE.m_Orbits[i].m_Radius = Mathf.Lerp(CINE.m_Orbits[i].m_Radius, CINE._farOrbits[i], Time.deltaTime);
-				CINE.m_Lens.FieldOfView = Mathf.Lerp(CINE.m_Lens.FieldOfView, 150, Time.deltaTime);
+				CINE.m_Lens.FieldOfView = Mathf.Lerp(CINE.m_Lens.FieldOfView, 100, Time.deltaTime);
 				//m_Orbits[i].m_Radius = _farOrbits[i] ;
 			}
 		}
