@@ -5,6 +5,10 @@ using Cinemachine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour {
+
+    public static string ANIMATOR_BOOL_MOVING = "isMoving";
+    public static string ANIMATOR_BOOL_GROUNDED = "isGrounded";
+
     [SerializeField]
     private Rigidbody _rb;
 	public GameObject PLAYER;
@@ -14,10 +18,19 @@ public class PlayerController : MonoBehaviour {
 	public CinemachineFreeLook CINE;
     
 	public GameObject OTS_CAMERA;
+    private Animator _animator;
+    private int _ignoreCollectibleLayerMask;
 	
 	void Awake(){
 		Cursor.lockState = CursorLockMode.Locked;
 	}
+
+    void Start()
+    {
+        _animator = GetComponent<Animator>();
+        _ignoreCollectibleLayerMask = 1 << LayerMask.NameToLayer("Collectible"); /* Bitmask set to only collide with the collectible layer */
+        _ignoreCollectibleLayerMask = ~_ignoreCollectibleLayerMask; /* Inverted layer mask to ignore the collectible layer */
+    }
 
     void Update()
     {
@@ -61,6 +74,15 @@ public class PlayerController : MonoBehaviour {
 		transform.LookAt (look);
 		
 		_rb.velocity = Vector3.ClampMagnitude(_rb.velocity,MAXIMUM_VELOCITY);
+
+        /* if velocity is greater than a threshold, set the isMoving flag on the animator */
+        if (_animator != null)
+        {
+            _animator.SetBool(ANIMATOR_BOOL_MOVING, _rb.velocity.sqrMagnitude > 1f);
+
+            /* Shoot a raycast to determine if there the ground is below, setting the isGrounded flag on the animator */
+            _animator.SetBool(ANIMATOR_BOOL_GROUNDED, Physics.Raycast(this.transform.position, Vector3.down, 1f, _ignoreCollectibleLayerMask));
+        }
 
     }
 
