@@ -678,7 +678,7 @@ namespace Cinemachine
 		
 		void Start(){
 			for(int i=0; i < m_Orbits.Length; i++){
-				_farOrbits[i] = m_Orbits[i].m_Radius + 4f;
+				_farOrbits[i] = m_Orbits[i].m_Radius + 3f;
 			}
 			for(int i=0; i < m_Orbits.Length; i++){
 				_defOrbits[i] = m_Orbits[i].m_Radius;
