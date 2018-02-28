@@ -7,6 +7,7 @@ public class HingeJointTarget : MonoBehaviour {
     public Transform target;
     [Tooltip("Only use one of these values at a time. Toggle invert if the rotation is backwards.")]
     public bool x, y, z, invert;
+	public bool log = false;
 
 	void Start ()
     {
@@ -21,10 +22,12 @@ public class HingeJointTarget : MonoBehaviour {
             {
                 JointSpring js;
                 js = hj.spring;
-
                 js.targetPosition = target.transform.localEulerAngles.x;
-                if (js.targetPosition > 180)
-                    js.targetPosition = js.targetPosition - 360;
+				if (log) {
+					Debug.Log(js.targetPosition);
+				}
+//                if (js.targetPosition > 180)
+//                    js.targetPosition = js.targetPosition - 360;
                 if (invert)
                     js.targetPosition = js.targetPosition * -1;
 
@@ -37,8 +40,11 @@ public class HingeJointTarget : MonoBehaviour {
                 JointSpring js;
                 js = hj.spring;
                 js.targetPosition = target.transform.localEulerAngles.y;
-                if (js.targetPosition > 180)
-                    js.targetPosition = js.targetPosition - 360;
+				if (log) {
+					Debug.Log(js.targetPosition);
+				}
+//                if (js.targetPosition > 180)
+//                    js.targetPosition = js.targetPosition - 360;
                 if (invert)
                     js.targetPosition = js.targetPosition * -1;
 
@@ -51,8 +57,11 @@ public class HingeJointTarget : MonoBehaviour {
                 JointSpring js;
                 js = hj.spring;
                 js.targetPosition = target.transform.localEulerAngles.z;
-                if (js.targetPosition > 180)
-                    js.targetPosition = js.targetPosition - 360;
+				if (log) {
+					Debug.Log(js.targetPosition);
+				}
+//                if (js.targetPosition > 180)
+//                    js.targetPosition = js.targetPosition - 360;
                 if (invert)
                     js.targetPosition = js.targetPosition * -1;
 

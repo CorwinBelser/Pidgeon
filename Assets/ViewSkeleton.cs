@@ -10,8 +10,10 @@ public class ViewSkeleton : MonoBehaviour
 
 	void OnDrawGizmos()
 	{
-		if (rootNode != null)
-		{
+		if (rootNode == null) {
+			rootNode = transform;
+		}
+
 			if(childNodes == null || childNodes.Length == 0)
 			{
 				//get all joints to draw
@@ -39,7 +41,7 @@ public class ViewSkeleton : MonoBehaviour
 				}
 			}
 
-		}
+
 	}
 
 	public void PopulateChildren()
