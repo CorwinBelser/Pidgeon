@@ -9,6 +9,15 @@ public class ShowNextHoop : MonoBehaviour, IReceiveTriggerFromChildren {
 
 	void Awake()
 	{
+		if (!FirstHoop)
+		{
+			/* Hide hoop */
+			this.gameObject.SetActive(false);
+		}
+	}
+
+	void Start()
+	{
 		if (FirstHoop)
 		{
 			ShowHoop();
@@ -40,8 +49,21 @@ public class ShowNextHoop : MonoBehaviour, IReceiveTriggerFromChildren {
         if (col.tag == "Player" && NextHoop != null)
 		{
 			NextHoop.ShowHoop();
-			/* Hide this hoop */
-			this.gameObject.SetActive(false);
+			/* Make this hoop a collectible */
+			Collectible c = this.GetComponent<Collectible>();
+			Rigidbody rb = this.GetComponent<Rigidbody>();
+			if (c != null && rb != null)
+			{
+				c.enabled = true;
+				rb.useGravity = true;
+				MeshCollider[] meshColliders = this.GetComponentsInChildren<MeshCollider>();
+				foreach (MeshCollider mc in meshColliders)
+				{
+					if (mc.name == "hoopCollider")
+						mc.gameObject.SetActive(false);
+				}
+				this.enabled = false;
+			}
 		}
     }
 
