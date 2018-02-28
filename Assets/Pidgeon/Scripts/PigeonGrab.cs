@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PigeonGrab : MonoBehaviour {
 
+    public static string ANIMATOR_BOOL_GRABBING = "isGrabbing";
+
     private List<Transform> _heldObjects;
+    private Animator _animator;
 
     void Start()
     {
         _heldObjects = new List<Transform>();
+        _animator = GetComponentInParent<Animator>();
     }
 
     void Update()
@@ -22,6 +26,8 @@ public class PigeonGrab : MonoBehaviour {
                 _heldObjects[i].GetComponent<Collectible>().Drop(_heldObjects[0].position, 0.5f * i);
             }
             _heldObjects.Clear();
+            if (_animator != null)
+                _animator.SetBool(ANIMATOR_BOOL_GRABBING, false);
         }
     }
     
@@ -40,8 +46,12 @@ public class PigeonGrab : MonoBehaviour {
                 succeeded = coll.gameObject.GetComponent<Collectible>().Pickup(this.transform);
             
             /* Add the collectible to the list of held items */
-            if (succeeded)
-                _heldObjects.Add(coll.transform);
+                if (succeeded)
+                {
+                    _heldObjects.Add(coll.transform);
+                    if (_animator != null)
+                        _animator.SetBool(ANIMATOR_BOOL_GRABBING, true);
+                }
         }
         else
         {

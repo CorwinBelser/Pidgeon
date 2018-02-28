@@ -48,7 +48,7 @@ public class Collectible : MonoBehaviour {
             /* Apply the force */
             _rigidbody.AddForce(force);
         }
-        else if (this.transform.position.sqrMagnitude > _respawnMagnitude)
+        else if (this.transform.position.y < -1000f)
         {
             /* Respawn the object, as it is likely out of bounds */
             this.transform.position = new Vector3(_spawnPosition.x, _spawnPosition.y + RESPAWN_HEIGHT, _spawnPosition.z);
