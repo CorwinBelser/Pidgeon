@@ -31,6 +31,7 @@ public class ShowNextHoop : MonoBehaviour, IReceiveTriggerFromChildren {
 		Color col = rend.material.color;
 		col.a = 1f;
 		rend.material.color = col;
+		SetHoopCollider(true);
 
 		/* Make the next hoop appear at half-alpha */
 		if (NextHoop != null)
@@ -56,13 +57,10 @@ public class ShowNextHoop : MonoBehaviour, IReceiveTriggerFromChildren {
 			{
 				c.enabled = true;
 				rb.useGravity = true;
-				MeshCollider[] meshColliders = this.GetComponentsInChildren<MeshCollider>();
-				foreach (MeshCollider mc in meshColliders)
-				{
-					if (mc.name == "hoopCollider")
-						mc.gameObject.SetActive(false);
-				}
+				SetHoopCollider(false);
 				this.enabled = false;
+				SetHoopShape(true);
+
 			}
 		}
     }
@@ -70,4 +68,24 @@ public class ShowNextHoop : MonoBehaviour, IReceiveTriggerFromChildren {
     public void OnChildTriggerExit(Collider col){}
 
     public void OnChildTriggerStay(Collider col){}
+
+	private void SetHoopCollider(bool toState)
+	{
+		MeshCollider[] meshColliders = this.GetComponentsInChildren<MeshCollider>();
+		foreach (MeshCollider mc in meshColliders)
+		{
+			if (mc.name == "hoopCollider")
+				mc.gameObject.SetActive(toState);
+		}
+	}
+
+	private void SetHoopShape(bool toState)
+	{
+		MeshCollider[] meshColliders = this.GetComponentsInChildren<MeshCollider>();
+		foreach (MeshCollider mc in meshColliders)
+		{
+			if (mc.name == "hoopShape")
+				mc.convex = true;
+		}
+	}	
 }
