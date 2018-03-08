@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
 	public CinemachineFreeLook CINE;
     
 	public GameObject OTS_CAMERA;
-    private Animator _animator;
+    public Animator _animator;
     public LayerMask GROUND_CHECK_LAYER_MASK;
 	
 	void Awake(){
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
+//        _animator = GetComponent<Animator>();
     }
 
     void Update()

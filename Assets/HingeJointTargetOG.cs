@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HingeJointTarget : MonoBehaviour {
+public class HingeJointTargetOG : MonoBehaviour {
 
     public HingeJoint hj;
     public Transform target;
     [Tooltip("Only use one of these values at a time. Toggle invert if the rotation is backwards.")]
-    public bool x, y, z, invert;
-	public bool log = false;
+	public bool x, y, z, invert, flip180, flipOffsets;
 
+
+
+	private Vector3 startRotationOffsets;
 	void Start ()
     {
-
+		startRotationOffsets = target.transform.localEulerAngles;
 	}
 	
 	void Update ()
@@ -22,12 +24,16 @@ public class HingeJointTarget : MonoBehaviour {
             {
                 JointSpring js;
                 js = hj.spring;
-                js.targetPosition = target.transform.localEulerAngles.x;
-				if (log) {
-					Debug.Log(js.targetPosition);
+
+				if (flipOffsets) {
+					js.targetPosition = target.transform.localEulerAngles.z + startRotationOffsets.x;
+				} else {
+					js.targetPosition = target.transform.localEulerAngles.z - startRotationOffsets.x;
 				}
                 if (js.targetPosition > 180)
-                    js.targetPosition = js.targetPosition - 360;
+					js.targetPosition = js.targetPosition - 360;
+				if (flip180)
+					js.targetPosition -= 180;
                 if (invert)
                     js.targetPosition = js.targetPosition * -1;
 
@@ -39,15 +45,18 @@ public class HingeJointTarget : MonoBehaviour {
             {
                 JointSpring js;
                 js = hj.spring;
-                js.targetPosition = target.transform.localEulerAngles.y;
-				if (log) {
-					Debug.Log(js.targetPosition);
+				if (flipOffsets) {
+					js.targetPosition = target.transform.localEulerAngles.y + startRotationOffsets.y;
+				} else {
+					js.targetPosition = target.transform.localEulerAngles.y - startRotationOffsets.y;
 				}
                 if (js.targetPosition > 180)
                     js.targetPosition = js.targetPosition - 360;
+				if (flip180)
+					js.targetPosition -= 180;
                 if (invert)
                     js.targetPosition = js.targetPosition * -1;
-
+				
                 js.targetPosition = Mathf.Clamp(js.targetPosition, hj.limits.min + 5, hj.limits.max - 5);
 
                 hj.spring = js;
@@ -56,16 +65,25 @@ public class HingeJointTarget : MonoBehaviour {
             {
                 JointSpring js;
                 js = hj.spring;
-				js.targetPosition = target.transform.eulerAngles.z;
-				if (log) {
-					Debug.Log(js.targetPosition);
+				if (flipOffsets) {
+					js.targetPosition = target.transform.localEulerAngles.z + startRotationOffsets.z;
+				} else {
+					js.targetPosition = target.transform.localEulerAngles.z - startRotationOffsets.z;
 				}
-                if (js.targetPosition > 180)
-                    js.targetPosition = js.targetPosition - 360;
-                if (invert)
-                    js.targetPosition = js.targetPosition * -1;
+				Debug.Log ("Target Rot = " + js.targetPosition);
+				if (js.targetPosition > 180) {
+					js.targetPosition = js.targetPosition - 360;
+					Debug.Log ("Constrain");
+				}
+				if (flip180)
+					js.targetPosition -= 180;
+				if (invert) {
+					js.targetPosition = js.targetPosition * -1;
+					Debug.Log ("Invert");
+				}
 
                 js.targetPosition = Mathf.Clamp(js.targetPosition, hj.limits.min + 5, hj.limits.max - 5);
+				Debug.Log ("Final Rot = " + js.targetPosition);
 
                 hj.spring = js;
             }

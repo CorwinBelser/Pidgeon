@@ -48,6 +48,7 @@ class HingeJointTargetDistributorEditor : Editor {
 				} else {
 					newComponent = root.GetChild (i).gameObject.GetComponent<HingeJointTarget> ();
 				}
+				newComponent.z = true;
 				HingeJoint newHingeJoint;
 				if (root.GetChild (i).GetComponent<HingeJoint> () == null) {
 					newHingeJoint = root.GetChild (i).gameObject.AddComponent<HingeJoint> ();
@@ -57,8 +58,8 @@ class HingeJointTargetDistributorEditor : Editor {
 				newComponent.target = mirror.GetChild (i);
 				newComponent.hj = newHingeJoint;
 				JointLimits limits = newHingeJoint.limits;
-				limits.min = -360;
-				limits.max = 360;
+				limits.min = -180;
+				limits.max = 180;
 				newHingeJoint.limits = limits;
 				JointSpring spring = newHingeJoint.spring;
 				spring.spring = 20;
@@ -70,6 +71,10 @@ class HingeJointTargetDistributorEditor : Editor {
 			if (root.GetChild (i).GetComponent<Rigidbody> () == null) {
 				root.GetChild (i).gameObject.AddComponent<Rigidbody> ();
 			}
+
+			root.GetChild (i).GetComponent<Rigidbody> ().useGravity = false;
+			root.GetChild (i).GetComponent<Rigidbody> ().mass = .05f;
+
 			AddMatchRotationsToChildren (root.GetChild (i), mirror.GetChild (i));
 
 		}

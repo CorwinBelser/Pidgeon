@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 597d53694dad30c4295fae9c1beee5cc
-timeCreated: 1517900760
+timeCreated: 1520418663
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -265,7 +265,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -481,11 +481,11 @@ ModelImporter:
     - boneName: Character1_RightShoulder
       humanName: RightShoulder
       limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        min: {x: 0, y: -15, z: -125.769226}
+        max: {x: 0, y: 15, z: 54.230774}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: Character1_LeftArm
       humanName: LeftUpperArm
       limit:

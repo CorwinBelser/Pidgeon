@@ -31,6 +31,7 @@ class MatchRotationsInHeirarchyEditor : Editor {
 			} else {
 				newComponent = root.GetChild (i).gameObject.GetComponent<MatchRotationsInHeirarchy> ();
 			}
+			Debug.Log (root.childCount + ", " + i);
 			newComponent.mirror = mirror.GetChild (i);
 			AddMatchRotationsToChildren (root.GetChild (i), mirror.GetChild (i));
 		}
