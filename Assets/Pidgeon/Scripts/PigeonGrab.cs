@@ -5,57 +5,43 @@ using UnityEngine;
 public class PigeonGrab : MonoBehaviour {
 
     public static string ANIMATOR_BOOL_GRABBING = "isGrabbing";
+    public LayerMask CollectibleLayer;
+    public float GrabRadius;
 
-    private List<Transform> _heldObjects;
+    private Transform _heldObject;
     private Animator _animator;
 
     void Start()
     {
-        _heldObjects = new List<Transform>();
         _animator = GetComponentInParent<Animator>();
     }
 
     void Update()
     {
         /* If the player presses Fire2, drop every item */
-        if (Input.GetButtonDown("Fire2") && _heldObjects.Count != 0)
+        if (Input.GetButtonDown("Fire2") && _heldObject != null)
         {
-            for (int i = 0; i < _heldObjects.Count; i++)
-            {
-                //Debug.Log("<color=blue>(Pigeon): Dropping " + _heldObjects[i].name + " </color>");
-                _heldObjects[i].GetComponent<Collectible>().Drop(_heldObjects[0].position, 0.5f * i);
-            }
-            _heldObjects.Clear();
+            _heldObject.GetComponent<Collectible>().Drop(_heldObject.position, 0f);
+            _heldObject = null;
             if (_animator != null)
                 _animator.SetBool(ANIMATOR_BOOL_GRABBING, false);
         }
-    }
-    
-    void OnTriggerEnter(Collider coll)
-    {
-        //Debug.Log("<color=green>(Pigeon): Trying to pickup " + coll.name + "</color>");
-        /* Check if the thing below is a collectible */
-        if (coll.tag == Collectible.COLLECTIBLE_TAG && !_heldObjects.Contains(coll.transform))
+        else if (Input.GetButtonDown("Fire2") && _heldObject == null)
         {
-            //Debug.Log("<color=green>    Tag matched! Picking up...</Color>");
-            /* Tell the collectible to follow the last grabbed collectible */
-            bool succeeded = false;
-            /*if (_heldObjects.Count != 0)
-                succeeded = coll.gameObject.GetComponent<Collectible>().Pickup(_heldObjects[_heldObjects.Count - 1]);
-            else*/
-                succeeded = coll.gameObject.GetComponent<Collectible>().Pickup(this.transform);
-            
-            /* Add the collectible to the list of held items */
-                if (succeeded)
+            Collider[] cols = Physics.OverlapSphere(this.transform.position, GrabRadius, CollectibleLayer);
+            if (cols.Length != 0)
+            {
+                Debug.Log("Found " + cols.Length + " objects near the feet");
+                /* Only pickup the first thing */
+                foreach (Collider col in cols)
                 {
-                    _heldObjects.Add(coll.transform);
-                    if (_animator != null)
-                        _animator.SetBool(ANIMATOR_BOOL_GRABBING, true);
+                    if (col.tag == Collectible.COLLECTIBLE_TAG)
+                    {
+                        if (col.gameObject.GetComponent<Collectible>().Pickup(this.transform))
+                            _heldObject = col.transform;
+                    }
                 }
-        }
-        else
-        {
-            //Debug.Log("<Color=green>    Tag didn't match or already held</color>");
+            }
         }
     }
 }

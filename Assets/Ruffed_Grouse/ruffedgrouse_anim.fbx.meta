@@ -492,10 +492,20 @@ ModelImporter:
     4300108: Big_Feather_19
     4300110: Big_Feather_20
     4300112: ruffedGrouse_low
-    7400000: Take 001
+    7400000: Flap
     9500000: //RootNode
     13700000: ruffedGrouse_low
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Big_feather_tex
+    second: {fileID: 2100000, guid: fb595683b13976e4cb03fbf82ac87f82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ruffedgrouse
+    second: {fileID: 2100000, guid: c2859b29abb15ab4cae64079d7adaf76, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -521,11 +531,39 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Flap
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 50
+    globalScale: 15
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
