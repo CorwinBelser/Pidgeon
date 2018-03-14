@@ -7,10 +7,10 @@ public class Collectible : MonoBehaviour {
 
     public static string COLLECTIBLE_TAG = "Collectible";
 
-    public float FOLLOW_VELOCITY = 2.5f;
-    public float MAX_VELOCITY = 15f;
-    public float MAX_FORCE = 40f;
-    public float GAIN = 5f;
+    public float FOLLOW_VELOCITY = 25f;
+    public float MAX_VELOCITY = 50f;
+    public float MAX_FORCE = 100f;
+    public float GAIN = 25f;
     public float PICKUP_COOLDOWN = 5f;
     private Vector3 _spawnPosition;
     private float _respawnMagnitude = 1000f;
@@ -26,6 +26,10 @@ public class Collectible : MonoBehaviour {
     public AudioClip COLLISION_SOUND;
     private AudioSource _audioSource;
     private float _musicPauseTime;
+	
+	public Transform GetTarget(){
+		return _target;
+	}
 
     void Start()
     {
