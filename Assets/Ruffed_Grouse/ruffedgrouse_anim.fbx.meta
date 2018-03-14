@@ -1,0 +1,577 @@
+fileFormatVersion: 2
+guid: 5c2becb7b68f1df478b7d93cea17dffd
+timeCreated: 1521003714
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Big_Feather_1
+    100002: Big_Feather_1 1
+    100004: Big_Feather_10
+    100006: Big_Feather_10 1
+    100008: Big_Feather_11
+    100010: Big_Feather_11 1
+    100012: Big_Feather_12
+    100014: Big_Feather_12 1
+    100016: Big_Feather_13
+    100018: Big_Feather_13 1
+    100020: Big_Feather_14
+    100022: Big_Feather_14 1
+    100024: Big_Feather_15
+    100026: Big_Feather_15 1
+    100028: Big_Feather_16
+    100030: Big_Feather_16 1
+    100032: Big_Feather_17
+    100034: Big_Feather_17 1
+    100036: Big_Feather_18
+    100038: Big_Feather_18 1
+    100040: Big_Feather_19
+    100042: Big_Feather_19 1
+    100044: Big_Feather_2
+    100046: Big_Feather_2 1
+    100048: Big_Feather_20
+    100050: Big_Feather_20 1
+    100052: Big_Feather_3
+    100054: Big_Feather_3 1
+    100056: Big_Feather_4
+    100058: Big_Feather_4 1
+    100060: Big_Feather_5
+    100062: Big_Feather_5 1
+    100064: Big_Feather_6
+    100066: Big_Feather_6 1
+    100068: Big_Feather_7
+    100070: Big_Feather_7 1
+    100072: Big_Feather_8
+    100074: Big_Feather_8 1
+    100076: Big_Feather_9
+    100078: Big_Feather_9 1
+    100080: Bird_head
+    100082: Bird_head_ctrl
+    100084: Bird_L_Feather1
+    100086: Bird_L_Feather10
+    100088: Bird_L_Feather2
+    100090: Bird_L_Feather3
+    100092: Bird_L_Feather4
+    100094: Bird_L_Feather5
+    100096: Bird_L_Feather6
+    100098: Bird_L_Feather7
+    100100: Bird_L_Feather8
+    100102: Bird_L_Feather9
+    100104: Bird_L_Wing1
+    100106: Bird_L_Wing10
+    100108: Bird_L_Wing10_ctrl
+    100110: Bird_L_Wing10_SDK
+    100112: Bird_L_Wing1_ctrl
+    100114: Bird_L_Wing1_SDK
+    100116: Bird_L_Wing2
+    100118: Bird_L_Wing2_ctrl
+    100120: Bird_L_Wing2_SDK
+    100122: Bird_L_Wing3
+    100124: Bird_L_Wing3_ctrl
+    100126: Bird_L_Wing3_SDK
+    100128: Bird_L_Wing4
+    100130: Bird_L_Wing4_ctrl
+    100132: Bird_L_Wing4_SDK
+    100134: Bird_L_Wing5
+    100136: Bird_L_Wing5_ctrl
+    100138: Bird_L_Wing5_SDK
+    100140: Bird_L_Wing6
+    100142: Bird_L_Wing6_ctrl
+    100144: Bird_L_Wing6_SDK
+    100146: Bird_L_Wing7
+    100148: Bird_L_Wing7_ctrl
+    100150: Bird_L_Wing7_SDK
+    100152: Bird_L_Wing8
+    100154: Bird_L_Wing8_ctrl
+    100156: Bird_L_Wing8_SDK
+    100158: Bird_L_Wing9
+    100160: Bird_L_Wing9_ctrl
+    100162: Bird_L_Wing9_SDK
+    100164: Bird_neck
+    100166: Bird_neck2
+    100168: Bird_neck_ctrl
+    100170: Bird_R_Feather1
+    100172: Bird_R_Feather10
+    100174: Bird_R_Feather2
+    100176: Bird_R_Feather3
+    100178: Bird_R_Feather4
+    100180: Bird_R_Feather5
+    100182: Bird_R_Feather6
+    100184: Bird_R_Feather7
+    100186: Bird_R_Feather8
+    100188: Bird_R_Feather9
+    100190: Bird_R_Wing1
+    100192: Bird_R_Wing10
+    100194: Bird_R_Wing10_ctrl
+    100196: Bird_R_Wing10_SDK
+    100198: Bird_R_Wing1_ctrl
+    100200: Bird_R_Wing1_SDK
+    100202: Bird_R_Wing2
+    100204: Bird_R_Wing2_ctrl
+    100206: Bird_R_Wing2_SDK
+    100208: Bird_R_Wing3
+    100210: Bird_R_Wing3_ctrl
+    100212: Bird_R_Wing3_SDK
+    100214: Bird_R_Wing4
+    100216: Bird_R_Wing4_ctrl
+    100218: Bird_R_Wing4_SDK
+    100220: Bird_R_Wing5
+    100222: Bird_R_Wing5_ctrl
+    100224: Bird_R_Wing5_SDK
+    100226: Bird_R_Wing6
+    100228: Bird_R_Wing6_ctrl
+    100230: Bird_R_Wing6_SDK
+    100232: Bird_R_Wing7
+    100234: Bird_R_Wing7_ctrl
+    100236: Bird_R_Wing7_SDK
+    100238: Bird_R_Wing8
+    100240: Bird_R_Wing8_ctrl
+    100242: Bird_R_Wing8_SDK
+    100244: Bird_R_Wing9
+    100246: Bird_R_Wing9_ctrl
+    100248: Bird_R_Wing9_SDK
+    100250: Bird_root_ctrl
+    100252: Bird_switch
+    100254: Bird_Tailbase
+    100256: Bird_Tailbase_ctrl
+    100258: Bird_Tailbase_SDK
+    100260: Bird_tailtip
+    100262: Bird_tailtip1
+    100264: Bird_tailtip2
+    100266: Bird_tailtip3
+    100268: Bird_tailtip4
+    100270: Geo
+    100272: group1
+    100274: //RootNode
+    100276: ruffedGrouse_low
+    100278: tail
+    100280: tailfeather_1
+    100282: tailfeather_10
+    100284: tailfeather_11
+    100286: tailfeather_12
+    100288: tailfeather_13
+    100290: tailfeather_14
+    100292: tailfeather_15
+    100294: tailfeather_16
+    100296: tailfeather_2
+    100298: tailfeather_3
+    100300: tailfeather_4
+    100302: tailfeather_5
+    100304: tailfeather_6
+    100306: tailfeather_7
+    100308: tailfeather_8
+    100310: tailfeather_9
+    100312: tailfeather_ribbon
+    100314: Tailfeathers
+    400000: Big_Feather_1
+    400002: Big_Feather_1 1
+    400004: Big_Feather_10
+    400006: Big_Feather_10 1
+    400008: Big_Feather_11
+    400010: Big_Feather_11 1
+    400012: Big_Feather_12
+    400014: Big_Feather_12 1
+    400016: Big_Feather_13
+    400018: Big_Feather_13 1
+    400020: Big_Feather_14
+    400022: Big_Feather_14 1
+    400024: Big_Feather_15
+    400026: Big_Feather_15 1
+    400028: Big_Feather_16
+    400030: Big_Feather_16 1
+    400032: Big_Feather_17
+    400034: Big_Feather_17 1
+    400036: Big_Feather_18
+    400038: Big_Feather_18 1
+    400040: Big_Feather_19
+    400042: Big_Feather_19 1
+    400044: Big_Feather_2
+    400046: Big_Feather_2 1
+    400048: Big_Feather_20
+    400050: Big_Feather_20 1
+    400052: Big_Feather_3
+    400054: Big_Feather_3 1
+    400056: Big_Feather_4
+    400058: Big_Feather_4 1
+    400060: Big_Feather_5
+    400062: Big_Feather_5 1
+    400064: Big_Feather_6
+    400066: Big_Feather_6 1
+    400068: Big_Feather_7
+    400070: Big_Feather_7 1
+    400072: Big_Feather_8
+    400074: Big_Feather_8 1
+    400076: Big_Feather_9
+    400078: Big_Feather_9 1
+    400080: Bird_head
+    400082: Bird_head_ctrl
+    400084: Bird_L_Feather1
+    400086: Bird_L_Feather10
+    400088: Bird_L_Feather2
+    400090: Bird_L_Feather3
+    400092: Bird_L_Feather4
+    400094: Bird_L_Feather5
+    400096: Bird_L_Feather6
+    400098: Bird_L_Feather7
+    400100: Bird_L_Feather8
+    400102: Bird_L_Feather9
+    400104: Bird_L_Wing1
+    400106: Bird_L_Wing10
+    400108: Bird_L_Wing10_ctrl
+    400110: Bird_L_Wing10_SDK
+    400112: Bird_L_Wing1_ctrl
+    400114: Bird_L_Wing1_SDK
+    400116: Bird_L_Wing2
+    400118: Bird_L_Wing2_ctrl
+    400120: Bird_L_Wing2_SDK
+    400122: Bird_L_Wing3
+    400124: Bird_L_Wing3_ctrl
+    400126: Bird_L_Wing3_SDK
+    400128: Bird_L_Wing4
+    400130: Bird_L_Wing4_ctrl
+    400132: Bird_L_Wing4_SDK
+    400134: Bird_L_Wing5
+    400136: Bird_L_Wing5_ctrl
+    400138: Bird_L_Wing5_SDK
+    400140: Bird_L_Wing6
+    400142: Bird_L_Wing6_ctrl
+    400144: Bird_L_Wing6_SDK
+    400146: Bird_L_Wing7
+    400148: Bird_L_Wing7_ctrl
+    400150: Bird_L_Wing7_SDK
+    400152: Bird_L_Wing8
+    400154: Bird_L_Wing8_ctrl
+    400156: Bird_L_Wing8_SDK
+    400158: Bird_L_Wing9
+    400160: Bird_L_Wing9_ctrl
+    400162: Bird_L_Wing9_SDK
+    400164: Bird_neck
+    400166: Bird_neck2
+    400168: Bird_neck_ctrl
+    400170: Bird_R_Feather1
+    400172: Bird_R_Feather10
+    400174: Bird_R_Feather2
+    400176: Bird_R_Feather3
+    400178: Bird_R_Feather4
+    400180: Bird_R_Feather5
+    400182: Bird_R_Feather6
+    400184: Bird_R_Feather7
+    400186: Bird_R_Feather8
+    400188: Bird_R_Feather9
+    400190: Bird_R_Wing1
+    400192: Bird_R_Wing10
+    400194: Bird_R_Wing10_ctrl
+    400196: Bird_R_Wing10_SDK
+    400198: Bird_R_Wing1_ctrl
+    400200: Bird_R_Wing1_SDK
+    400202: Bird_R_Wing2
+    400204: Bird_R_Wing2_ctrl
+    400206: Bird_R_Wing2_SDK
+    400208: Bird_R_Wing3
+    400210: Bird_R_Wing3_ctrl
+    400212: Bird_R_Wing3_SDK
+    400214: Bird_R_Wing4
+    400216: Bird_R_Wing4_ctrl
+    400218: Bird_R_Wing4_SDK
+    400220: Bird_R_Wing5
+    400222: Bird_R_Wing5_ctrl
+    400224: Bird_R_Wing5_SDK
+    400226: Bird_R_Wing6
+    400228: Bird_R_Wing6_ctrl
+    400230: Bird_R_Wing6_SDK
+    400232: Bird_R_Wing7
+    400234: Bird_R_Wing7_ctrl
+    400236: Bird_R_Wing7_SDK
+    400238: Bird_R_Wing8
+    400240: Bird_R_Wing8_ctrl
+    400242: Bird_R_Wing8_SDK
+    400244: Bird_R_Wing9
+    400246: Bird_R_Wing9_ctrl
+    400248: Bird_R_Wing9_SDK
+    400250: Bird_root_ctrl
+    400252: Bird_switch
+    400254: Bird_Tailbase
+    400256: Bird_Tailbase_ctrl
+    400258: Bird_Tailbase_SDK
+    400260: Bird_tailtip
+    400262: Bird_tailtip1
+    400264: Bird_tailtip2
+    400266: Bird_tailtip3
+    400268: Bird_tailtip4
+    400270: Geo
+    400272: group1
+    400274: //RootNode
+    400276: ruffedGrouse_low
+    400278: tail
+    400280: tailfeather_1
+    400282: tailfeather_10
+    400284: tailfeather_11
+    400286: tailfeather_12
+    400288: tailfeather_13
+    400290: tailfeather_14
+    400292: tailfeather_15
+    400294: tailfeather_16
+    400296: tailfeather_2
+    400298: tailfeather_3
+    400300: tailfeather_4
+    400302: tailfeather_5
+    400304: tailfeather_6
+    400306: tailfeather_7
+    400308: tailfeather_8
+    400310: tailfeather_9
+    400312: tailfeather_ribbon
+    400314: Tailfeathers
+    2100000: Big_feather_tex
+    2100002: ruffedgrouse
+    2300000: Big_Feather_1
+    2300002: Big_Feather_1 1
+    2300004: Big_Feather_10
+    2300006: Big_Feather_10 1
+    2300008: Big_Feather_11
+    2300010: Big_Feather_11 1
+    2300012: Big_Feather_12
+    2300014: Big_Feather_12 1
+    2300016: Big_Feather_13
+    2300018: Big_Feather_13 1
+    2300020: Big_Feather_14
+    2300022: Big_Feather_14 1
+    2300024: Big_Feather_15
+    2300026: Big_Feather_15 1
+    2300028: Big_Feather_16
+    2300030: Big_Feather_16 1
+    2300032: Big_Feather_17
+    2300034: Big_Feather_17 1
+    2300036: Big_Feather_18
+    2300038: Big_Feather_18 1
+    2300040: Big_Feather_19
+    2300042: Big_Feather_19 1
+    2300044: Big_Feather_2
+    2300046: Big_Feather_2 1
+    2300048: Big_Feather_20
+    2300050: Big_Feather_20 1
+    2300052: Big_Feather_3
+    2300054: Big_Feather_3 1
+    2300056: Big_Feather_4
+    2300058: Big_Feather_4 1
+    2300060: Big_Feather_5
+    2300062: Big_Feather_5 1
+    2300064: Big_Feather_6
+    2300066: Big_Feather_6 1
+    2300068: Big_Feather_7
+    2300070: Big_Feather_7 1
+    2300072: Big_Feather_8
+    2300074: Big_Feather_8 1
+    2300076: Big_Feather_9
+    2300078: Big_Feather_9 1
+    2300080: tailfeather_1
+    2300082: tailfeather_10
+    2300084: tailfeather_11
+    2300086: tailfeather_12
+    2300088: tailfeather_13
+    2300090: tailfeather_14
+    2300092: tailfeather_15
+    2300094: tailfeather_16
+    2300096: tailfeather_2
+    2300098: tailfeather_3
+    2300100: tailfeather_4
+    2300102: tailfeather_5
+    2300104: tailfeather_6
+    2300106: tailfeather_7
+    2300108: tailfeather_8
+    2300110: tailfeather_9
+    3300000: Big_Feather_1
+    3300002: Big_Feather_1 1
+    3300004: Big_Feather_10
+    3300006: Big_Feather_10 1
+    3300008: Big_Feather_11
+    3300010: Big_Feather_11 1
+    3300012: Big_Feather_12
+    3300014: Big_Feather_12 1
+    3300016: Big_Feather_13
+    3300018: Big_Feather_13 1
+    3300020: Big_Feather_14
+    3300022: Big_Feather_14 1
+    3300024: Big_Feather_15
+    3300026: Big_Feather_15 1
+    3300028: Big_Feather_16
+    3300030: Big_Feather_16 1
+    3300032: Big_Feather_17
+    3300034: Big_Feather_17 1
+    3300036: Big_Feather_18
+    3300038: Big_Feather_18 1
+    3300040: Big_Feather_19
+    3300042: Big_Feather_19 1
+    3300044: Big_Feather_2
+    3300046: Big_Feather_2 1
+    3300048: Big_Feather_20
+    3300050: Big_Feather_20 1
+    3300052: Big_Feather_3
+    3300054: Big_Feather_3 1
+    3300056: Big_Feather_4
+    3300058: Big_Feather_4 1
+    3300060: Big_Feather_5
+    3300062: Big_Feather_5 1
+    3300064: Big_Feather_6
+    3300066: Big_Feather_6 1
+    3300068: Big_Feather_7
+    3300070: Big_Feather_7 1
+    3300072: Big_Feather_8
+    3300074: Big_Feather_8 1
+    3300076: Big_Feather_9
+    3300078: Big_Feather_9 1
+    3300080: tailfeather_1
+    3300082: tailfeather_10
+    3300084: tailfeather_11
+    3300086: tailfeather_12
+    3300088: tailfeather_13
+    3300090: tailfeather_14
+    3300092: tailfeather_15
+    3300094: tailfeather_16
+    3300096: tailfeather_2
+    3300098: tailfeather_3
+    3300100: tailfeather_4
+    3300102: tailfeather_5
+    3300104: tailfeather_6
+    3300106: tailfeather_7
+    3300108: tailfeather_8
+    3300110: tailfeather_9
+    4300000: tailfeather_10
+    4300002: tailfeather_9
+    4300004: tailfeather_8
+    4300006: tailfeather_7
+    4300008: tailfeather_16
+    4300010: tailfeather_15
+    4300012: tailfeather_14
+    4300014: tailfeather_6
+    4300016: tailfeather_5
+    4300018: tailfeather_4
+    4300020: tailfeather_13
+    4300022: tailfeather_12
+    4300024: tailfeather_11
+    4300026: tailfeather_3
+    4300028: tailfeather_2
+    4300030: tailfeather_1
+    4300032: Big_Feather_1
+    4300034: Big_Feather_2
+    4300036: Big_Feather_3
+    4300038: Big_Feather_4
+    4300040: Big_Feather_5
+    4300042: Big_Feather_6
+    4300044: Big_Feather_7
+    4300046: Big_Feather_8
+    4300048: Big_Feather_10
+    4300050: Big_Feather_9
+    4300052: Big_Feather_12
+    4300054: Big_Feather_11
+    4300056: Big_Feather_14
+    4300058: Big_Feather_13
+    4300060: Big_Feather_16
+    4300062: Big_Feather_15
+    4300064: Big_Feather_17
+    4300066: Big_Feather_18
+    4300068: Big_Feather_20
+    4300070: Big_Feather_19
+    4300072: Big_Feather_2
+    4300074: Big_Feather_1
+    4300076: Big_Feather_3
+    4300078: Big_Feather_4
+    4300080: Big_Feather_5
+    4300082: Big_Feather_6
+    4300084: Big_Feather_7
+    4300086: Big_Feather_8
+    4300088: Big_Feather_9
+    4300090: Big_Feather_10
+    4300092: Big_Feather_11
+    4300094: Big_Feather_12
+    4300096: Big_Feather_13
+    4300098: Big_Feather_14
+    4300100: Big_Feather_15
+    4300102: Big_Feather_16
+    4300104: Big_Feather_17
+    4300106: Big_Feather_18
+    4300108: Big_Feather_19
+    4300110: Big_Feather_20
+    4300112: ruffedGrouse_low
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: ruffedGrouse_low
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 50
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
