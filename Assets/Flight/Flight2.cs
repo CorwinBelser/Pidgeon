@@ -28,16 +28,16 @@ public class Flight2 : MonoBehaviour {
 	void Update () {
 		float vAdjust = 0f;
 		float hAdjust = 0f;
-		if (Input.GetKey (KeyCode.UpArrow)) {
+		if (Input.GetKey (KeyCode.W)) {
 			vAdjust += pitchSensitivity;
 		}
-		if (Input.GetKey (KeyCode.DownArrow)) {
+		if (Input.GetKey (KeyCode.S)) {
 			vAdjust -= pitchSensitivity;
 		}
-		if (Input.GetKey (KeyCode.LeftArrow)) {
+		if (Input.GetKey (KeyCode.A)) {
 			hAdjust += rollSensitivity;
 		}
-		if (Input.GetKey (KeyCode.RightArrow)) {
+		if (Input.GetKey (KeyCode.D)) {
 			hAdjust -= rollSensitivity;
 		}
 		vAdjust *= Time.deltaTime;

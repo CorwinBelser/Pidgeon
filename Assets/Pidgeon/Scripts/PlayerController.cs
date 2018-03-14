@@ -20,7 +20,9 @@ public class PlayerController : MonoBehaviour {
 	public GameObject OTS_CAMERA;
     public Animator _animator;
     public LayerMask GROUND_CHECK_LAYER_MASK;
-	
+
+	public bool DisableMovementInFavorOfSomeOTherScript = false;
+
 	void Awake(){
 		Cursor.lockState = CursorLockMode.Locked;
 	}
@@ -32,9 +34,11 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-       if(Input.GetButtonDown("Fire1")){
-		   _rb.AddExplosionForce(JUMP_AMOUNT,PLAYER.transform.position,1F,1F);
-	   }
+		if (!DisableMovementInFavorOfSomeOTherScript) {
+			if (Input.GetButtonDown ("Fire1")) {
+				_rb.AddExplosionForce (JUMP_AMOUNT, PLAYER.transform.position, 1F, 1F);
+			}
+		}
     }
 
     // Update is called once per frame
@@ -53,26 +57,28 @@ public class PlayerController : MonoBehaviour {
 
 		Vector3 direction = cameraForward * inputVertical + cameraRight * inputHorizontal;
 		direction = direction.normalized;
-		if(inputVertical > 0 || inputHorizontal != 0){
-			for(int i=0; i < CINE.m_Orbits.Length; i++){
-				CINE.m_Orbits[i].m_Radius = Mathf.Lerp(CINE.m_Orbits[i].m_Radius, CINE._farOrbits[i], Time.deltaTime);
-				CINE.m_Lens.FieldOfView = Mathf.Lerp(CINE.m_Lens.FieldOfView, 100, Time.deltaTime);
-				//m_Orbits[i].m_Radius = _farOrbits[i] ;
+		if (!DisableMovementInFavorOfSomeOTherScript) {
+			if (inputVertical > 0 || inputHorizontal != 0) {
+				for (int i = 0; i < CINE.m_Orbits.Length; i++) {
+					CINE.m_Orbits [i].m_Radius = Mathf.Lerp (CINE.m_Orbits [i].m_Radius, CINE._farOrbits [i], Time.deltaTime);
+					CINE.m_Lens.FieldOfView = Mathf.Lerp (CINE.m_Lens.FieldOfView, 100, Time.deltaTime);
+					//m_Orbits[i].m_Radius = _farOrbits[i] ;
+				}
+			} else if (inputVertical < 1 || inputHorizontal < 1 || inputHorizontal > -1) {
+				for (int i = 0; i < CINE.m_Orbits.Length; i++) {
+					CINE.m_Orbits [i].m_Radius = Mathf.Lerp (CINE.m_Orbits [i].m_Radius, CINE._defOrbits [i], Time.deltaTime);
+					CINE.m_Lens.FieldOfView = Mathf.Lerp (CINE.m_Lens.FieldOfView, 50, Time.deltaTime);
+					//m_Orbits[i].m_Radius = _defOrbits[i] ;
+				}
 			}
-		}
-		else if(inputVertical < 1 || inputHorizontal < 1 || inputHorizontal > -1){
-			for(int i=0; i < CINE.m_Orbits.Length; i++){
-				CINE.m_Orbits[i].m_Radius = Mathf.Lerp(CINE.m_Orbits[i].m_Radius, CINE._defOrbits[i], Time.deltaTime);
-				CINE.m_Lens.FieldOfView = Mathf.Lerp(CINE.m_Lens.FieldOfView, 50, Time.deltaTime);
-				//m_Orbits[i].m_Radius = _defOrbits[i] ;
-			}
-		}
-		_rb.velocity = new Vector3 (SPEED * direction.x, _rb.velocity.y, SPEED * direction.z);
-		Vector3 look = new Vector3 (transform.position.x + direction.x, PLAYER.transform.position.y, transform.position.z + direction.z);
-		transform.LookAt (look);
 		
-		_rb.velocity = Vector3.ClampMagnitude(_rb.velocity,MAXIMUM_VELOCITY);
+			_rb.velocity = new Vector3 (SPEED * direction.x, _rb.velocity.y, SPEED * direction.z);
+			Vector3 look = new Vector3 (transform.position.x + direction.x, PLAYER.transform.position.y, transform.position.z + direction.z);
+			transform.LookAt (look);
+		
+			_rb.velocity = Vector3.ClampMagnitude (_rb.velocity, MAXIMUM_VELOCITY);
 
+		}
         /* if velocity is greater than a threshold, set the isMoving flag on the animator */
         if (_animator != null)
         {

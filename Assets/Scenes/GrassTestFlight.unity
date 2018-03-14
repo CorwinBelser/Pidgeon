@@ -3774,7 +3774,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529439215}
-  m_LocalRotation: {x: -0.19891635, y: 0.000000035962966, z: -0.000000019794845, w: -0.9800165}
+  m_LocalRotation: {x: -0.19891652, y: 0.000000035962984, z: -0.00000001979485, w: -0.98001647}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6002,8 +6002,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 868791508}
-  m_LocalRotation: {x: -0.19891621, y: -0.00000015968106, z: -0.0000000013748932,
-    w: -0.9800165}
+  m_LocalRotation: {x: -0.19891652, y: -0.00000015968115, z: -0.0000000013749031,
+    w: -0.98001647}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7609,6 +7609,7 @@ MonoBehaviour:
   GROUND_CHECK_LAYER_MASK:
     serializedVersion: 2
     m_Bits: 1
+  DisableMovementInFavorOfSomeOTherScript: 1
 --- !u!114 &1126159944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8551,7 +8552,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1272356646}
-  m_LocalRotation: {x: -0.19891635, y: 0.000000035962966, z: -0.000000019794845, w: -0.9800165}
+  m_LocalRotation: {x: -0.19891652, y: 0.000000035962984, z: -0.00000001979485, w: -0.98001647}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8857,6 +8858,7 @@ MonoBehaviour:
   GROUND_CHECK_LAYER_MASK:
     serializedVersion: 2
     m_Bits: 1
+  DisableMovementInFavorOfSomeOTherScript: 0
 --- !u!114 &1290495140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11717,7 +11719,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 32ad89a2b084c422cb69134357ff02de, type: 3}
+  - {fileID: 2100000, guid: 1923a05c1b8952d47bb6e8c6436d1938, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14256,6 +14258,7 @@ MonoBehaviour:
   GROUND_CHECK_LAYER_MASK:
     serializedVersion: 2
     m_Bits: 1
+  DisableMovementInFavorOfSomeOTherScript: 0
 --- !u!114 &2145235907
 MonoBehaviour:
   m_ObjectHideFlags: 0
