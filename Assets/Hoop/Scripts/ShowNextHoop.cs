@@ -9,6 +9,15 @@ public class ShowNextHoop : MonoBehaviour, IReceiveTriggerFromChildren {
 
 	void Awake()
 	{
+		if (!FirstHoop)
+		{
+			/* Hide hoop */
+			this.gameObject.SetActive(false);
+		}
+	}
+
+	void Start()
+	{
 		if (FirstHoop)
 		{
 			ShowHoop();
@@ -22,6 +31,7 @@ public class ShowNextHoop : MonoBehaviour, IReceiveTriggerFromChildren {
 		Color col = rend.material.color;
 		col.a = 1f;
 		rend.material.color = col;
+		SetHoopCollider(true);
 
 		/* Make the next hoop appear at half-alpha */
 		if (NextHoop != null)
@@ -40,12 +50,42 @@ public class ShowNextHoop : MonoBehaviour, IReceiveTriggerFromChildren {
         if (col.tag == "Player" && NextHoop != null)
 		{
 			NextHoop.ShowHoop();
-			/* Hide this hoop */
-			this.gameObject.SetActive(false);
+			/* Make this hoop a collectible */
+			Collectible c = this.GetComponent<Collectible>();
+			Rigidbody rb = this.GetComponent<Rigidbody>();
+			if (c != null && rb != null)
+			{
+				c.enabled = true;
+				rb.useGravity = true;
+				SetHoopCollider(false);
+				this.enabled = false;
+				SetHoopShape(true);
+
+			}
 		}
     }
 
     public void OnChildTriggerExit(Collider col){}
 
     public void OnChildTriggerStay(Collider col){}
+
+	private void SetHoopCollider(bool toState)
+	{
+		MeshCollider[] meshColliders = this.GetComponentsInChildren<MeshCollider>();
+		foreach (MeshCollider mc in meshColliders)
+		{
+			if (mc.name == "hoopCollider")
+				mc.gameObject.SetActive(toState);
+		}
+	}
+
+	private void SetHoopShape(bool toState)
+	{
+		MeshCollider[] meshColliders = this.GetComponentsInChildren<MeshCollider>();
+		foreach (MeshCollider mc in meshColliders)
+		{
+			if (mc.name == "hoopShape")
+				mc.convex = true;
+		}
+	}	
 }
